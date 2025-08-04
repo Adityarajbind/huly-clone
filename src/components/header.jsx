@@ -15,7 +15,7 @@ const Header = () => {
     }, 200); // ← Delay before hiding
   };
   return (
-    <div className="w-full px-8 py-5 flex justify-between items-center bg-black text-white">
+    <div className="w-full px-8 py-5 flex justify-between items-center bg-transparent text-white absolute top-0 z-50">
       {/* Left Section: Logo & Nav */}
       <div className="flex items-center gap-25">
         {/* Logo */}
@@ -103,65 +103,64 @@ const Header = () => {
             </button>
             {openMenu === "community" && (
               <ul className="absolute mt-2 bg-[var(--bl1)] rounded-lg w-64 p-2 shadow-lg z-50 border border-[var(--bl2)] ">
-                <li className="flex justify-between items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                <li className="flex gap-2 items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                  <div className="w-10 h-10 border border-[#242527] flex justify-center items-center bg-[var(--bl2)] rounded-lg">
+                  <img src="icons/X.svg" className="w-1/2 h-1/2 " />
+                  </div>
                   <a href="#" className="block">
-
-                    Blog
+                    X.com
                     <p className="text-[var(--tl2)] font-normal">
-                      Read our Latest inside
+                      Follow our latest news
                     </p>
                   </a>
                   <img
                     src="icons/downArrow.svg"
-                    className="h-3 w-3 pt-1 rotate-270"
+                    className="h-3 w-3 pt-1 rotate-270 ml-auto"
                   />
                 </li>
-                <li className="flex justify-between items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                <li className="flex gap-2 items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                  <div className="w-10 h-10 border border-[#242527] flex justify-center items-center bg-[var(--bl2)] rounded-lg">
+                  <img src="icons/linkden.svg" className="w-1/2 h-1/2 " />
+                  </div>
                   <a href="#" className="block">
-                    Blog
+                    Linkden
                     <p className="text-[var(--tl2)] font-normal">
-                      Read our Latest inside
+                      Get updates
                     </p>
                   </a>
                   <img
                     src="icons/downArrow.svg"
-                    className="h-3 w-3 pt-1 rotate-270"
+                    className="h-3 w-3 pt-1 rotate-270 ml-auto"
                   />
                 </li>
-                <li className="flex justify-between items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                <li className="flex gap-2 items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                  <div className="w-10 h-10 border border-[#242527] flex justify-center items-center bg-[var(--bl2)] rounded-lg">
+                  <img src="icons/youtube.svg" className="w-1/2 h-1/2 " />
+                  </div>
                   <a href="#" className="block">
-                    Blog
+                    Youtube
                     <p className="text-[var(--tl2)] font-normal">
-                      Read our Latest inside
+                      Subcribe to the channel
                     </p>
                   </a>
                   <img
                     src="icons/downArrow.svg"
-                    className="h-3 w-3 pt-1 rotate-270"
+                    className="h-3 w-3 pt-1 rotate-270 ml-auto"
                   />
                 </li>
-                <li className="flex justify-between items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                <li className="flex gap-2 items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
+                  <div className="w-10 h-10 border border-[#242527] flex justify-center items-center bg-[var(--bl2)] rounded-lg">
+                  <img src="icons/github.svg" className="w-1/2 h-1/2 " />
+                  </div>
                   <a href="#" className="block">
-                    Blog
+                    Github
                     <p className="text-[var(--tl2)] font-normal">
-                      Read our Latest inside
+                      Star us
                     </p>
                   </a>
                   <img
                     src="icons/downArrow.svg"
-                    className="h-3 w-3 pt-1 rotate-270"
-                  />
-                </li>
-                <li className="flex justify-between items-center hover:bg-[var(--bl2)] rounded-xl px-2 py-2">
-                  <a href="#" className="block">
-                    Blog
-                    <p className="text-[var(--tl2)] font-normal">
-                      Read our Latest inside
-                    </p>
-                  </a>
-                  <img
-                    src="icons/downArrow.svg"
-                    className="h-3 w-3 pt-1 rotate-270"
+                    className="h-3 w-3 pt-1 rotate-270 ml-auto"
                   />
                 </li>
               </ul>
