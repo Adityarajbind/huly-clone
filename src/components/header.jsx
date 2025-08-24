@@ -36,8 +36,7 @@ const Header = () => {
           >
             <button
               className="cursor-pointer flex justify-center items-center gap-1"
-              onMouseEnter={() => toggleMenu("resources")}
-              onMouseLeave={() => toggleMenu(null)}
+              
             >
               Resources{" "}
               <img
