@@ -87,6 +87,12 @@ const getGlowOpacity = () => {
             opacity: right,
           }}
         ></div>
+        <div
+          className="pointer-events-none absolute right-0 top-0 shadow-[inset_0px_0px_5px_1px_#d15f3d] rounded-full  w-full h-full "
+          style={{
+            opacity: right,
+          }}
+        ></div>
 
         {/* left GLOW */}
         <div
@@ -97,6 +103,12 @@ const getGlowOpacity = () => {
         ></div>
         <div
           className="pointer-events-none absolute left-0 top-0 shadow-[0px_0px_5px_1px_#d15f3d] rounded-full  w-full h-full "
+          style={{
+            opacity: left,
+          }}
+        ></div>
+        <div
+          className="pointer-events-none absolute left-0 top-0 shadow-[inset_0px_0px_5px_1px_black] rounded-full  w-full h-full "
           style={{
             opacity: left,
           }}

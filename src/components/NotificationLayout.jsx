@@ -7,8 +7,10 @@ const NotificationLayout = ({ trigger }) => {
   const orangeControls = useAnimation();
   const bellTopControls = useAnimation();
   const bellBottomControls = useAnimation();
+  const CounterControls = useAnimation();
   const [cooldown, setcooldown] = useState(false);
   const cooldownRef = useRef(null);
+  const [Counter, setCounter] = useState(24)
 
   const handleMouseEnter = () => {
     blueControls.start({
@@ -28,11 +30,17 @@ const NotificationLayout = ({ trigger }) => {
     });
 
     bellBottomControls.start({
-      x: [0, 3, -3, 0],
-      y: [0, 3, 3, 0],
+      x: [3, -3, 3,-3,2,-2,1,-1, 0],      
+      y: [0, 3, 3,2,1, 0],
       scale: [1, 1.1, 1.15, 1.1, 1],
-      transition: { duration: 0.8, ease: "easeInOut" },
+      transition: { duration: 1, ease: "linear" },
     });
+    CounterControls.start({
+      x: [3, -3, 3,-3,2,-2,1,-1, 0],      
+      y: [0, -3, -3,-2,-1, 0],
+      scale: [1,0.5, 0.1, 0, 0.1, 0.5, 1],
+      transition: { duration: 0.8, ease: "linear" },
+    })
   };
   useEffect(() => {
     if (cooldown) {
@@ -41,6 +49,7 @@ const NotificationLayout = ({ trigger }) => {
 
     if (trigger) {
       handleMouseEnter();
+      setCounter(Counter + 1);
       setcooldown(true);
       // start cooldown timer
       cooldownRef.current = setTimeout(() => {
@@ -96,15 +105,17 @@ const NotificationLayout = ({ trigger }) => {
               {/* Bell Bottom (clapper) - subtle bounce */}
               <motion.img
                 src="/blob/bell bottom.png"
-                className="w-[30%] mx-auto mt-[0.1rem]"
+                className="w-[30%] mx-auto mt-[0.1rem] origin-top"
                 animate={bellBottomControls}
               />
-              <div
+              <motion.div
                 className="notification-number rounded-2xl bg-[#ff8a64] 
-              shadow-[0_0px_1px_1px_#ff774a] absolute top-1 right-[-2px]  w-4 h-3 flex justify-center items-center "
+              shadow-[0_4px_5px_-2px_#ff774a] absolute top-1 right-[-2px]  w-4 h-3 flex justify-center items-center text-neutral-800"
+              animate={CounterControls}
+
               >
-                <span className="text-[0.5rem] ">26</span>
-              </div>
+                <span className="text-[0.5rem] ">{Counter} </span>
+              </motion.div>
             </div>
           </div>
         </div>

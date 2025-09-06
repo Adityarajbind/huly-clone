@@ -7,13 +7,17 @@ import imgBg from "./assets/img-bg.svg";
 import imgBgLines from "./assets/img-bg-lines.svg";
 import TaskGraphLayout from "./components/TaskGraphLayout";
 import NotificationLayout from "./components/NotificationLayout";
+import VedioCallSection from "./components/VedioCallSection";
+import GithubSection from "./components/GithubSection";
+import MetaBrainSection from "./components/MetaBrainSection";
+import Footer from "./components/footer";
 
 const App = () => {
   const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 }); // hidden by default
   const heroRef = useRef(null); // ✅ reference to hero section
   const imgRef = useRef(null);
   const [imgSrc, setImgSrc] = useState("/assest-huly/img11.png");
-  const [notificationTrigger, setnotificationTrigger] = useState(false)
+  const [notificationTrigger, setnotificationTrigger] = useState(false);
   const handleMouseMove = (e, elementRef) => {
     const rect = elementRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -30,14 +34,15 @@ const App = () => {
     const relativeY = e.clientY - rect.top; // Mouse Y inside image
     const height = rect.height;
     const percentage = relativeY / height;
-
     let newSrc;
-    if (percentage < 0.33) {
+    if (0.34 < percentage && 0.42 > percentage) {
       newSrc = "/assest-huly/img11.png";
-    } else if (percentage < 0.66) {
+    } else if (0.42 < percentage && 0.5 > percentage) {
       newSrc = "/assest-huly/img12.png";
-    } else {
+    } else if (0.5 < percentage && 0.58 > percentage) {
       newSrc = "/assest-huly/img13.png";
+    } else {
+      newSrc = "/assest-huly/img11.png";
     }
 
     setMousePos({ x: e.clientX - rect.left, y: relativeY });
@@ -111,7 +116,8 @@ const App = () => {
       </div>
 
       {/* features detail section */}
-      <div className="bg-[#f6f6f6] w-full flex justify-center flex-col items-center stay-productive relative z-10 py-36 lg:py-28 md:py-22 sm:py-14">
+      {/* f6f6f6 */}
+      <div className="bg-[#f6f6f6] w-full flex justify-center flex-col items-center stay-productive relative z-10 py-36 lg:pt-25 md:py-22 sm:py-14">
         <h1 className="text-[5.3rem] font-bold  tracking-tighter ">
           Unmatched productivity
         </h1>
@@ -135,7 +141,7 @@ const App = () => {
                 onMouseMove={handleMouseMoveimg}
                 onMouseLeave={() => setMousePos({ x: -9999, y: -9999 })}
               />
-              <div className="m-5 text-[#99999a] text-[1.1rem] absolute bottom-0">
+              <div className="m-5 text-[#99999a] text-[1.1rem] absolute bottom-0 z-[-1] ">
                 <span className="text-white font-semibold">
                   Keyboard shortcuts.
                 </span>{" "}
@@ -153,11 +159,10 @@ const App = () => {
           </div>
 
           <div className="w-full flex justify-center items-center flex-row-reverse gap-4">
-            <div 
-            className="w-[34%] h-[18.9rem] relative  overflow-hidden rounded-xl"
-            onMouseEnter={() => setnotificationTrigger(true)}
-            onMouseLeave={() => setnotificationTrigger(false)}
-
+            <div
+              className="w-[34%] h-[18.9rem] relative  overflow-hidden rounded-xl"
+              onMouseEnter={() => setnotificationTrigger(true)}
+              onMouseLeave={() => setnotificationTrigger(false)}
             >
               <NotificationLayout trigger={notificationTrigger} />
               <div className="m-5 text-[#99999a] text-[1.1rem] absolute bottom-0">
@@ -178,6 +183,16 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      {/* vedio call thingy */}
+      <VedioCallSection />
+      {/* Github section */}
+      <GithubSection />
+
+      <MetaBrainSection />
+
+      {/* footer */}
+      <Footer />
     </>
   );
 };
