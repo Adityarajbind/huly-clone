@@ -3,7 +3,7 @@ import React from "react";
 
 const VedioCallSection = () => {
   return (
-    <div className="relative w-full h-[176vh] overflow-hidden">
+    <div className="relative w-full h-[176vh] max-[1025px]:h-[200vh] max-[770px]:h-[170vh] max-sm:h-[140vh]  overflow-hidden">
       {/* div background */}
       <div className="w-full h-auto aspect-vedio  ">
         <video
@@ -11,23 +11,23 @@ const VedioCallSection = () => {
           muted
           loop
           playsInline
-          className=" w-full h-full absolute top-0 scale-[1.45] right-[5rem] border"
+          className=" w-full h-full absolute top-0 max-sm:top-[-10%]  scale-[1.45] max-sm:right-[8%] max-sm:scale-[2] right-[5rem] "
         >
           <source src="/waves blue.mp4" type="video/mp4" />
         </video>
-      </div>
+      </div>     
 
-      <div className="text-[#0f1115] font-bold absolute top-13 left-[16.5%] text-[4rem] leading-[1.1] tracking-tighter">
+      <div className="text-[#0f1115] font-bold absolute top-13 max-[440px]:mt-12 max-sm:top-2 left-[16.5%] max-[900px]:left-[14%] max-sm:left-[4%] text-[4rem] max-sm:text-[2.2rem] leading-[1.1] tracking-tighter ">
         <p>Work together.</p>
         <p>Like in the office.</p>
-        <p className="text-[1.2rem] text-neutral-700 leading-normal tracking-normal font-normal">
+        <p className="text-[1.2rem] max-sm:text-[0.8rem] text-neutral-700 leading-normal tracking-normal font-normal">
           Create customized virtual office spaces for any department
-          <br />
+          <br className="max-[425px]:hidden "/>
           or event with high quality audio and video conferencing.
         </p>
       </div>
 
-      <div className="absolute w-[65%] aspect-[1.78] top-[49%] -translate-y-1/2  left-[16.5%] flex justify-center items-center rounded-xl overflow-hidden">
+      <div className="absolute w-[65%] max-sm:w-[89%] aspect-[1.78] top-[49%] max-sm:top-[39%] -translate-y-1/2  left-[16.5%] max-sm:left-[5%] max-[1025px]:left-[15.3%] max-[770px]:left-[12.5%] flex justify-center items-center rounded-xl overflow-hidden  ">
         <video
           autoPlay
           muted
@@ -106,32 +106,32 @@ const VedioCallSection = () => {
       </div>
 
       {/* second last bottom section */}
-      <div className="text-black font-bold absolute bottom-[13rem] left-[16.5%] leading-[1.1] tracking-tighter">
-        <p className="text-[1.3rem] text-neutral-700 leading-normal tracking-normal font-normal">
+      <div className="text-black font-bold absolute bottom-[13rem]  left-[16.5%] [1025px]:left-[15.3%] max-[770px]:left-[12.5%] max-sm:left-[4%] max-[540px]:bottom-[15.5rem] max-[440px]:bottom-[17rem]  leading-[1.1] tracking-tighter ">
+        <p className="text-[1.3rem] max-[770px]:text-[1rem] max-sm:text-[0.9rem] text-neutral-700 leading-normal tracking-normal font-normal">
           Collaborating with remote teams is easy in your virtual office
-          <br />
+          <br className="max-[500px]:hidden "/>
           environment. Enjoy real-time communication within your workspace
-          <br />
+          <br className="max-[500px]:hidden "/>
           without additional software hassle.
         </p>
       </div>
 
       {/* bottom section */}
-      <div className=" absolute bottom-0 z-[40] w-[67%]  left-[16%] flex justify-between items-center ">
-        <div className="w-[27%] h-full ">
-          <img src="/blob/four sqaures.png" className="w-8 h-8" />
-          <h1 className="text-[2rem] font-medium tracking-tight leading-tight ">Customize Workspace</h1>
-          <p className="text-neutral-700 text-[0.9rem] ">Create your own office and meeting rooms to suit your teams needs.</p>
+      <div className=" absolute bottom-0  z-[40] w-[67%] max-sm:w-full left-[16%] max-sm:left-0 flex justify-between items-center max-sm:flex-col max-sm:pl-[4%] gap-2  ">
+        <div className="w-[27%] max-sm:w-full  h-full ">
+          <img src="/blob/four sqaures.png" className="w-8 h-8 max-sm:w-5 max-sm:h-5" />
+          <h1 className="text-[2rem] max-[770px]:text-[1rem] max-sm:text-[0.9rem] font-medium tracking-tight leading-tight ">Customize Workspace</h1>
+          <p className="text-neutral-700 text-[0.9rem] max-sm:text-[0.8rem] ">Create your own office and meeting rooms to suit your teams needs.</p>
         </div>
-        <div className="w-[27%] h-full ">
-          <img src="/blob/video.png" className="w-8 h-8" />
-          <h1 className="text-[2rem] font-medium tracking-tight leading-tight ">Audio and Vedio calls</h1>
-          <p className="text-neutral-700 text-[0.9rem] ">Collaborate efficeintly and seamlessly with high quality virtual confrenceing</p>
+        <div className="w-[27%] max-sm:w-full h-full ">
+          <img src="/blob/video.png" className="w-8 h-8  max-sm:w-5 max-sm:h-5" />
+          <h1 className="text-[2rem] max-[770px]:text-[1rem] max-sm:text-[0.9rem] font-medium tracking-tight leading-tight ">Audio and Vedio calls</h1>
+          <p className="text-neutral-700 text-[0.9rem] max-sm:text-[0.8rem] ">Collaborate efficeintly and seamlessly with high quality virtual confrenceing</p>
         </div>
-        <div className="w-[27%] h-full ">
-          <img src="/blob/invite.png" className="w-8 h-8" />
-          <h1 className="text-[2rem] font-medium tracking-tight leading-tight ">Invite geusts</h1>
-          <p className="text-neutral-700 text-[0.9rem] ">Meet with guests without ever needing to leave your workplace</p>
+        <div className="w-[27%] max-sm:w-full h-full ">
+          <img src="/blob/invite.png" className="w-8 h-8  max-sm:w-5 max-sm:h-5" />
+          <h1 className="text-[2rem] max-[770px]:text-[1rem] max-sm:text-[0.9rem] font-medium tracking-tight leading-tight ">Invite geusts</h1>
+          <p className="text-neutral-700 text-[0.9rem] max-sm:text-[0.8rem] ">Meet with guests without ever needing to leave your workplace</p>
         </div>
       </div>
     </div>

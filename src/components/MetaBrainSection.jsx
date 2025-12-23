@@ -15,25 +15,27 @@ const MetaBrainSection = () => {
   return (
     <>
       <div className=" bg-[#f6f6f6] w-full h-full relative overflow-hidden">
-        <div className="sidebar-lines w-1/2 absolute left-[-12%] top-0">
+        <div className="sidebar-lines w-1/2 absolute left-[-12%] top-0 ">
           <img
             src="/assest-huly/veritical blue lines.png"
             alt=""
             className="w-full "
           />
         </div>
-        <div className="txt-layer pt-25 ml-[13rem] w-[65%] flex flex-col">
-          <div className="self-end mb-10">
-            <h1 className="text-[5rem] font-semibold tracking-tighter leading-[1.1] text-neutral-900 ">
-              Huly <br /> MetaBrain
+        <div className="txt-layer relative z-10 pt-25 max-md:pt-15 ml-[13rem] w-[65%] max-[810px]:w-[80%] max-[810px]:ml-[5rem] max-md:m-0 max-md:px-4 max-md:w-[100%] flex flex-col">
+          <div className="self-end max-md:self-start mb-10 max-md:mb-5">
+            <h1 className="text-[5rem] max-sm:text-[3rem] font-semibold tracking-tighter leading-[1.1] max-md:leading-[1] text-neutral-900 ">
+              Huly <br className="max-md:hidden" /> MetaBrain
             </h1>
-            <p className="text-[1.1rem] text-neutral-700 mt-1 ">
-              Connect every element of your workflow to build a dynamic <br />{" "}
-              knowledge base. Soon, Huly AI will turn it into a powerful asset —
-              a <br /> second brain for your team.
+            <p className="text-[1.1rem] max-sm:text-[0.9rem] text-neutral-700 mt-1 ">
+              Connect every element of your workflow to build a dynamic{" "}
+              <br className="max-md:hidden" /> knowledge base. Soon, Huly AI
+              will turn it into a powerful asset — a{" "}
+              <br className="max-md:hidden" /> second brain for your team.
             </p>
           </div>
-          <div className="w-full ">
+          {/* pc view */}
+          <div className="w-full max-md:hidden ">
             <div className="w-full relative ">
               <div className="flex justify-between w-full">
                 <div className="w-[66%] relative">
@@ -51,7 +53,7 @@ const MetaBrainSection = () => {
                     <span className="text-white font-semibold">
                       Take notes.
                     </span>{" "}
-                    <br />
+                    <br className="max-md:hidden"  />
                     create documents to keep <br /> track of team resources
                   </div>
                 </div>
@@ -117,12 +119,95 @@ const MetaBrainSection = () => {
               </div>
             </div>
           </div>
+
+          {/* mobile view */}
+          <div className="w-full hidden max-md:flex flex-col gap-3">
+            <div className="w-full  flex max-[540px]:flex-col gap-3">
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image1.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">
+                    Create tasks.
+                  </span>{" "}
+                  Schedule your personal events and todos.
+                </div>
+              </div>
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image2.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">
+                    Plan your work.
+                  </span>{" "}
+                  Visualize your workday in your planner.
+                </div>
+              </div>
+            </div>
+            <div className="w-full  flex max-[540px]:flex-col gap-3">
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image3.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">Take notes.</span>{" "}
+                  create documents to keep track of team resources
+                </div>
+              </div>
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image4.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">
+                    Sync in real time.
+                  </span>{" "}
+                  Connect with your team instantly to <br />
+                  monitor progress and track updates.
+                </div>
+              </div>
+            </div>
+            <div className="w-full  flex max-[540px]:flex-col gap-3">
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image5.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">
+                    Chat with team.
+                  </span>{" "}
+                  Send DM and create rou chats.
+                </div>
+              </div>
+              <div className="w-1/2 max-[540px]:w-full relative ">
+                <img
+                  src="/blob/image6.jpg"
+                  className="w-full h-auto rounded-[1rem] "
+                />
+                <div className="m-3 text-neutral-400  absolute top-0 z-40">
+                  <span className="text-white font-semibold">
+                    Manage projects.
+                  </span>{" "}
+                  Customize your workspace to fit the needs of r teams.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <h1 className="text-[5rem] font-bold tracking-[-0.20rem] leading-[1.1] text-neutral-950 relative pl-[22rem]  inline-block mt-25">
+
+      {/* second part */}
+      <h1 className="text-[5rem] max-lg:text-[4rem] font-bold tracking-[-0.20rem] leading-[1.1] text-neutral-950 relative pl-[22rem] max-lg:pl-[18rem]  inline-block mt-25 max-md:pl-3 max-md:text-[3rem]">
         Knowledge at <br />
         Your Fingertip
-        <div className="profile flex flex-col items-center justify-center absolute bottom-0 right-[-4.2%] h-[8rem] z-50">
+        <div className="profile flex flex-col items-center justify-center absolute bottom-0 max-md:bottom-[-12%] right-[-4.2%] max-md:right-[-13%] h-[8rem] z-50">
           <div className="image w-16 h-16 border-[2px] border-blue-600 rounded-full shadow-[0px_0px_20px_1px_#2e2e2e] ">
             <img
               src="/assest-huly/white man.jpg"
@@ -133,11 +218,11 @@ const MetaBrainSection = () => {
           <div className="dot w-2 h-2 bg-blue-600 rounded-full"></div>
         </div>
       </h1>
-      <div className="flex gap-14">
-        <div className="sticky rounded-[12px] top-[30%] z-50 ml-20 w-[340px] h-[224px] flex justify-center item-center shadow-[0px_0px_20px_5px_#00000061] mb-23">
+      <div className="flex gap-10">
+        <div className="sticky rounded-[12px] top-[30%] z-50 ml-20 w-[340px] max-lg:w-[240px] h-[224px] max-lg:h-[180px] flex justify-center item-center shadow-[0px_0px_20px_5px_#00000061] mb-23 max-md:hidden ">
           <img
             src="/blob/team.png"
-            className="  scale-[1.18] object-contain "
+            className="  scale-x-[1.19]  w-full h-full  "
           />
           <div className="absolute bottom-0 left-0 p-4">
             <p className="text-sm text-neutral-900 mb-1 font-medium">
@@ -158,19 +243,20 @@ const MetaBrainSection = () => {
             }}
           />
         </div>
-        {/* second part */}
-        <div className=" ">
-          <p className="text-[1.2rem]  text-neutral-700">
+        {/* second of the second part */}
+
+        <div className="w-full max-md:px-3">
+          <p className="text-[1.2rem] max-md:text-[1.1rem]  text-neutral-700">
             Huly offers a wide range of features to create and manage your
-            project <br />
+            project <br  className="max-md:hidden"  />
             documentation. Huly's suite of collaborative editing tools boosts
-            team <br />
+            team <br className="max-md:hidden"   />
             efficeincy
           </p>
           {/* buttons */}
-          <p className="text-[1.2rem]  text-neutral-700 mt-8 relative">
-            <div className=" absolute top-[-49%] rounded left-1/2 translate-x-[-80%] bg-[#303236] text-[#94959c] z-10 flex shadow-[0px_10px_30px_0px_#2e2e2e]">
-              <span className="font-semibold bg-[#5683da] text-neutral-200 text-[0.9rem] m-2 px-2 py-0.5 rounded">
+          <p className="text-[1.2rem]  max-md:text-[1.1rem]   text-neutral-700 mt-4 relative">
+            <div className=" absolute top-[-60%] rounded left-1/2 translate-x-[-80%] max-sm:translate-x-[-50%] bg-[#303236] text-[#94959c] z-10 flex shadow-[0px_10px_30px_0px_#2e2e2e]  max-sm:scale-[0.8] ">
+              <span className="font-semibold bg-[#5683da] text-neutral-200 text-[0.9rem] max-[920px]:text-[0.7rem] m-2 px-1 py-0.5 rounded">
                 + Link
               </span>
               <div className="border-x flex mx-1">
@@ -206,58 +292,31 @@ const MetaBrainSection = () => {
                 </button>
               </div>
             </div>
-
-            <div
-              className={`bg-[#ffe587] pl-1.5 relative ${TxtStyles[style]} ${
-                style === "Bold" ? "w-[74.5%]" : "w-[70.5%] "
-              }`}
+            <span
+              className={`bg-[#ffe587] pl-1.5 relative ${TxtStyles[style]}
+              `}
             >
-              <div className="profile flex flex-col items-center justify-center absolute top-[-25%] left-[-1%] h-[2.5rem] z-10 ">
-                <div className="dot w-2 h-2 bg-neutral-800 rounded-full"></div>
-                <div className="h-[2rem] bg-neutral-800 w-[2px] rounded-b-full">
-                  {" "}
-                </div>
-              </div>
               Documents in Huly can be used for sharing reference materials
-              among
-            </div>
-            <div
-              className={`bg-[#ffe587] pl-1.5 relative ${TxtStyles[style]} ${
-                style === "Bold" ? "w-[74%]" : "w-[69.5%] "
-              }`}
-            >
-              team members,collaborating on plans and roadmaps ,storing meeting
-            </div>
-            <div
-              className={`bg-[#ffe587] pl-1.5 relative ${TxtStyles[style]} ${
-                style === "Bold" ? "w-[36%]" : "w-[34.5%] "
-              }`}
-            >
-              <div className="profile flex flex-col items-center justify-center absolute z-1 bottom-[-35%] right-[-1%] h-[2.5rem] ">
-                <div className="h-[1.75rem] bg-neutral-800 w-[2px] rounded-t-full">
-                  {" "}
-                </div>
-                <div className="dot w-2 h-2 bg-neutral-800 rounded-full"></div>
-              </div>
-              notes and assigning action Items.
-            </div>
+              among <br className="max-[950px]:hidden" /> team  members,collaborating on plans and roadmaps ,storing
+              meeting notes <br className="max-[950px]:hidden" /> and assigning action Items.
+            </span>
           </p>
-          <div className="w-[71%] rounded-xl mt-10 mb-8">
+          <div className=" w-[72%] max-lg:w-[85%] max-md:w-full rounded-xl mt-10 mb-8">
             <img
               src="/assest-huly/anything store.jpg"
               className="w-full h-full rounded-xl"
             />
           </div>
-          <p className="text-[1.2rem]  text-[#323438] ">
+          <p className="text-[1.2rem] max-md:text-[1.1rem]  text-[#323438] ">
             With <span className="text-neutral-400 line-through">live</span>{" "}
             real-time collaboration, remote teams are able to work together to{" "}
-            <br /> bring a unified vision to life on the page. Tagging users,
-            linking to issues, <br /> and assigning action items are just a few
+            <br className="max-lg:hidden" /> bring a unified vision to life on the page. Tagging users,
+            linking to issues, <br className="max-lg:hidden"  /> and assigning action items are just a few
             of the{" "}
             <span className="text-neutral-400 line-through">
               Advanced solution
             </span>
-            <br />
+            <br className="max-md:hidden"  />
             <span className="text-[#f58562] relative mr-1">
               powerful feature
               <div className="profile flex flex-col items-center justify-center absolute bottom-[-60%] right-[-25%] h-[8rem] ">
@@ -273,17 +332,17 @@ const MetaBrainSection = () => {
             </span>{" "}
             available within the Huly document editor.
           </p>
-          <div className="w-[72%] rounded-xl my-8">
+          <div className="w-[72%] max-lg:w-[85%] max-md:w-full rounded-xl my-8">
             <img
               src="/assest-huly/object code.svg"
               className="w-full h-full rounded-xl"
             />
           </div>
-          <p className="text-[1.2rem]  text-[#1c1d20] ">
+          <p className="text-[1.2rem]  max-md:text-[1.1rem]   text-[#1c1d20] ">
             Documents can be enhanced with rich text formatting, images,
-            attachments <br />
+            attachments <br className="max-md:hidden"  />
             and code blocks. Use documents to organize team plans, create
-            technical <br />
+            technical <br className="max-md:hidden"  />
             documentation and support your team's progress towards shared goals.
           </p>
           <div className="mt-2 flex items-center gap-1">

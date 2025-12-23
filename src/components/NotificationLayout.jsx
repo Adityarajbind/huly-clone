@@ -59,17 +59,17 @@ const NotificationLayout = ({ trigger }) => {
   }, [trigger]);
   return (
     <>
-      <div className="w-full h-full absolute top-0">
+      <div className="w-full h-full relative top-0 rounded-xl ">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className=" w-full h-full absolute top-0 scale-[1.49] z-[-1] "
+          className=" w-full h-full absolute  z-[-1] object-cover rounded-xl "
         >
           <source src="/waves.mp4" type="video/mp4" />
         </video>
-        <div className=" w-[4.2rem] h-[4.2rem] mx-[39.5%] bg-black my-[31.5%] rounded-full relative">
+        <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2  w-[5rem] h-[5rem] bg-black rounded-full ">
           <motion.div
             className="absolute w-full h-full"
             initial={{ rotate: 0 }}

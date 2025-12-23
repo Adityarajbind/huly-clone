@@ -1,57 +1,4 @@
-import React, { useState, useRef } from "react";
-import Header from "./components/header";
-import ButtonMain from "./components/ButtonMain";
-import TaskLayout from "./components/TaskLayout";
-import hero from "./assets/background-vd.mp4";
-import imgBg from "./assets/img-bg.svg";
-import imgBgLines from "./assets/img-bg-lines.svg";
-import TaskGraphLayout from "./components/TaskGraphLayout";
-import NotificationLayout from "./components/NotificationLayout";
-import VedioCallSection from "./components/VedioCallSection";
-import GithubSection from "./components/GithubSection";
-import MetaBrainSection from "./components/MetaBrainSection";
-import Footer from "./components/Footer";
-
-const App = () => {
-  const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 }); // hidden by default
-  const heroRef = useRef(null); // ✅ reference to hero section
-  const imgRef = useRef(null);
-  const [imgSrc, setImgSrc] = useState("/assest-huly/img11.png");
-  const [notificationTrigger, setnotificationTrigger] = useState(false);
-  const handleMouseMove = (e, elementRef) => {
-    const rect = elementRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
-      setMousePos({ x, y });
-    } else {
-      setMousePos({ x: -9999, y: -9999 });
-    }
-  };
-  const handleMouseMoveimg = (e) => {
-    const rect = imgRef.current.getBoundingClientRect();
-    const relativeY = e.clientY - rect.top; // Mouse Y inside image
-    const height = rect.height;
-    const percentage = relativeY / height;
-    let newSrc;
-    if (0.34 < percentage && 0.42 > percentage) {
-      newSrc = "/assest-huly/img11.png";
-    } else if (0.42 < percentage && 0.5 > percentage) {
-      newSrc = "/assest-huly/img12.png";
-    } else if (0.5 < percentage && 0.58 > percentage) {
-      newSrc = "/assest-huly/img13.png";
-    } else {
-      newSrc = "/assest-huly/img11.png";
-    }
-
-    setMousePos({ x: e.clientX - rect.left, y: relativeY });
-    setImgSrc((prev) => (prev !== newSrc ? newSrc : prev));
-  };
-  return (
-    <>
-  
-            <Header />
+      <Header />
 
       {/* hero section */}
       <div
@@ -194,19 +141,3 @@ const App = () => {
           </div>
         </div>
       </div>
-      
-      {/* vedio call thingy */}
-      <VedioCallSection />
-
-      {/* Github section */}
-      <GithubSection />
-
-      <MetaBrainSection />
-
-      {/* footer */}
-      <Footer />
-    </>
-  );
-};
-
-export default App;

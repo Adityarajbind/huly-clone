@@ -9,7 +9,7 @@ const variants = {
   // variants
   hoverRight: (delay = 0) => ({
     // slide left → (invisible) jump to right → slide back to 0
-    x: ["0%", "-550%", "-550%", "100%", "0%"],
+    x: ["0%", "-600%", "-600%", "100%", "0%"],
     opacity: [1, 1, 0, 0, 1],
     transition: {
       // make the jump happen while invisible
@@ -46,7 +46,7 @@ export default function MeetingComponent() {
 
   return (
     <motion.div
-      className="w-full h-full rounded-xl bg-contain bg-center bg-no-repeat relative overflow-hidden"
+      className="w-full h-full rounded-xl bg-cover bg-center bg-no-repeat relative overflow-hidden"
       style={{ backgroundImage: `url("/blob/meeting bg.png")` }}
       onHoverStart={handleHover}
     >
@@ -57,7 +57,7 @@ export default function MeetingComponent() {
       {/* main image */}
       <motion.img
         src="/blob/design meting res.png"
-        className="scale-[0.35] absolute top-[10%] left-25 origin-top-left rounded-2xl z-50"
+        className="scale-[0.35] absolute top-[10%] left-20 origin-top-left rounded-2xl z-50 max-lg:left-10  "
         animate={animate ? "hover" : ""}
         variants={{ hover: variants.hoverMain }}
         onAnimationComplete={() => setAnimate(false)}
@@ -66,7 +66,7 @@ export default function MeetingComponent() {
       {/* floating right-side images */}
       <motion.img
         src="/blob/prototype discussion.png"
-        className="scale-[0.35] absolute top-3 right-10 origin-top-right"
+        className="scale-[0.35] absolute max-md:scale-[0.25] top-3  max-md:top-6 right-10 origin-top-right "
         animate={animate ? "hover" : ""}
         variants={{ hover: variants.hoverRight(0.05) }}
         style={{ willChange: "transform, opacity" }}
@@ -75,7 +75,7 @@ export default function MeetingComponent() {
 
       <motion.img
         src="/blob/discuss details.png"
-        className="scale-[0.35] absolute top-[35%] right-30 origin-top-right"
+        className="scale-[0.35] absolute max-md:scale-[0.25] top-[35%] right-30 max-md:right-15 origin-top-right"
         animate={animate ? "hover" : ""}
         variants={{ hover: variants.hoverRight() }}
         style={{ willChange: "transform, opacity" }}
@@ -84,7 +84,7 @@ export default function MeetingComponent() {
 
       <motion.img
         src="/blob/dev meeting.png"
-        className="scale-[0.35] absolute bottom-[48%] right-[-2rem] origin-bottom-right"
+        className="scale-[0.35] absolute max-md:scale-[0.25] bottom-[48%] right-[-2rem] origin-bottom-right"
         animate={animate ? "hover" : ""}
         variants={{ hover: variants.hoverRight(0.1) }}
         style={{ willChange: "transform, opacity" }}
@@ -93,7 +93,7 @@ export default function MeetingComponent() {
 
       <motion.img
         src="/blob/design meting.png"
-        className="scale-[0.35] absolute bottom-10 right-15 origin-bottom-right"
+        className="scale-[0.35] absolute max-md:scale-[0.25] bottom-10 max-md:bottom-12 right-15 max-md:right-10 origin-bottom-right"
         animate={animate ? "hover" : ""}
         variants={{ hover: variants.hoverRight(0.05) }}
         style={{ willChange: "transform, opacity" }}

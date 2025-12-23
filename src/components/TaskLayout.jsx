@@ -234,7 +234,7 @@ export default function TaskLayout() {
 
       {/* midle menu */}
       <div
-        className={`rounded-xl flex flex-col justify-center gap-1.5 w-[40%]  bg-[#c7cfe0] p-2 shadow-[0_15px_20px_2px_black] mt-[5rem] transition-all duration-[400ms] ease-in ${
+        className={`rounded-xl flex flex-col justify-center gap-1.5 w-[12rem]  bg-[#c7cfe0] p-2 shadow-[0_15px_20px_2px_black] mt-[5rem] transition-all duration-[400ms] ease-in ${
           animate ? " scale-[1.05] " : ""
         }`}
         ref={mainRef}
