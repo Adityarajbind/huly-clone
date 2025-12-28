@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-[0.85rem] font-medium pt-4 max-sm: text-center">
-              Copyright &copy; 2025 Huly Labs. All rights reserved.
+              Copyright &copy; 2025 Adityaraj bind. All rights reserved.
             </p>
           </div>
           <div className="right-side max-sm:flex max-sm:items-center max-sm:flex-col max-sm:mt-4">
