@@ -6,7 +6,7 @@ A responsive UI clone of the Huly.io website built using React , Tailwind CSS an
 🔗 https://your-demo-link.vercel.app
 
 ## Screenshots
-![Homepage](./screenshots/home.png)
+![Homepage](.public/assest-huly/homepage.png)
 
 ## Features
 - Pixel-accurate UI recreation of Huly.io
