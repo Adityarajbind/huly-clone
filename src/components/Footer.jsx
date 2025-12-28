@@ -3,7 +3,7 @@ import ButtonMain from "./ButtonMain";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#090a0c] w-full min-h-screen relative overflow-hidden">
+      <div className="bg-[#090a0c] w-full min-h-screen relative overflow-hidden z-9999">
         {/* for pc top-[-19.5%] and left-[-30%] is center */}
         <img
           src="/ClockBg.png"
@@ -33,9 +33,11 @@ const Footer = () => {
               Unlock the future Of productivity with Huly. <br className="max-[500px]:hidden" /> Remember, this
               joumey is just gettirtg started.
             </p>
-            <div className="flex justify-center items-center gap-2 flex-col">
+            <div className="flex justify-around items-center gap-2 max-md:flex-col">
+              <div className="w-[11rem] ">
               <ButtonMain  />
-              <button className="flex items-center gap-2 py-1 px-4 border max-md:w-1/2 border-neutral-500 rounded-4xl">
+              </div>
+              <button className="flex items-center gap-4 py-2 px-5 border w-[11rem] border-neutral-500 rounded-4xl">
                 <img src="/blob/chakri.svg" className="w-5 h-5" />
                 Join our slack
               </button>

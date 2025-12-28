@@ -42,7 +42,7 @@ const getGlowOpacity = () => {
   return (
     <>
       {/* MAIN BUTTON */}
-      <div className="relative min-[400px]:w-[15rem] w-[12rem] " >
+      <div className="relative w-full " >
       <a
         ref={btnRef}
         onMouseMove={handleMouseMove}

@@ -50,9 +50,7 @@ const App = () => {
   };
   return (
     <>
-  
-            <Header />
-
+      <Header />
       {/* hero section */}
       <div
         ref={heroRef} // ✅ attach ref
@@ -69,7 +67,7 @@ const App = () => {
             playsInline
             className="absolute top-0 xl:left-[30px] lg:left-[-6%] left-[40px] w-full h-full object-cover scale-x-[1.25] scale-y-[1.3] max-[768px]:scale-x-[1.3] max-sm:scale-[2.2] max-sm:object-contain max-sm:left-10 max-sm:shadow-2xl "
           >
-           { <source src={hero} type="video/mp4" />}
+            {<source src={hero} type="video/mp4" />}
           </video>
         </div>
 
@@ -95,7 +93,8 @@ const App = () => {
             Hi my name is Adityaraj. I'm a frontend developer.
             <p>This is a huly.io website UI clone I made for practice.</p>
           </p>
-          <ButtonMain />
+          <div className="w-[14rem] "><ButtonMain /></div>
+          
         </div>
         <div className="min-[600px]:hidden flex flex-col w-full  bg-[#090a0c] text-white py-[2rem] px-4 sm:px-6 md:px-10 absolute bottom-0 shadow-[0_0_50px_50px_#090a0c]">
           <p className=" text-[#ffffff99] mb-3 text-sm">
@@ -138,8 +137,9 @@ const App = () => {
         </h1>
         <p className="text-[#1d1e1ff1] text-[1.1rem]  min-md:py-3  max-md:px-3 max-sm:text-[0.9rem] ">
           Huly is a process, project, time, and knowledge management platform
-          that  <br className="min-lg:hidden max-md:hidden"/> provides amazing collaboration < br className="max-lg:hidden"/> opportunities for developers and
-          product teams alike.
+          that <br className="min-lg:hidden max-md:hidden" /> provides amazing
+          collaboration <br className="max-lg:hidden" /> opportunities for
+          developers and product teams alike.
         </p>
 
         <div className="w-full flex justify-center items-center flex-col mt-9 gap-4">
@@ -194,7 +194,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      
+
       {/* vedio call thingy */}
       <VedioCallSection />
 

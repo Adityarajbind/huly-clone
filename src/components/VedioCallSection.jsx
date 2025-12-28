@@ -40,12 +40,12 @@ const VedioCallSection = () => {
         <div className="absolute w-full h-full text-white select-none">
           {/* top left heading */}
           <div className="top-right-heading absolute top-2 left-3">
-            <h1 className="text-white font-semibold text-[0.85rem] ">
+            <h1 className="text-white font-semibold text-[0.85rem] max-[500px]:text-[0.65rem] ">
               Onboarding Meeting
             </h1>
-            <div className="flex items-center gap-2 text-xs">
+            <div className="flex items-center gap-2 max-[500px]:gap-1 text-xs max-[500px]:text-[0.65rem]">
               {" "}
-              <img src="/blob/multiple people.svg" className="w-4 h-4" />4
+              <img src="/blob/multiple people.svg" className="w-4 h-4 max-[500px]:w-3 max-[500px]:h-3" />4
               participants
             </div>
           </div>
@@ -54,31 +54,31 @@ const VedioCallSection = () => {
           <div className="absolute right-0 top-0 w-[21.6%] h-[69.8%] flex flex-col justify-center items-center gap-2 ">
             <div className="cards w-full h-[31%] relative">
               <div className=" px-0.5 py-[0.150rem] absolute top-2 right-2 bg-blue-600 rounded-full  ">
-                <img src="/blob/mic on.svg" className="w-3 h-3 " />
+                <img src="/blob/mic on.svg" className="w-3 h-3 max-[500px]:h-1 max-[500px]:w-1" />
               </div>
-              <div className="flex items-center gap-1 text-xs absolute bottom-0 left-1 ">
+              <div className="flex items-center gap-1 text-xs max-[500px]:text-[0.2rem] absolute bottom-0 left-1 ">
                 {" "}
-                <img src="/blob/single person.svg" className="w-2 h-2" />
+                <img src="/blob/single person.svg" className="w-2 h-2 max-[500px]:h-1 max-[500px]:w-1" />
                 Chosen Undead
               </div>
             </div>
             <div className="cards w-full h-[31%] relative">
               <div className=" px-0.5 py-[0.150rem] absolute top-2 right-2 bg-neutral-500 rounded-full  ">
-                <img src="/blob/mic off.svg" className="w-3 h-3 " />
+                <img src="/blob/mic off.svg" className="w-3 h-3 max-[500px]:h-1 max-[500px]:w-1" />
               </div>
-              <div className="flex items-center gap-1 text-xs absolute bottom-0 left-1 ">
+              <div className="flex items-center gap-1 text-xs max-[500px]:text-[0.2rem] absolute bottom-0 left-1 ">
                 {" "}
-                <img src="/blob/single person.svg" className="w-2 h-2" />
+                <img src="/blob/single person.svg" className="w-2 h-2 max-[500px]:h-1 max-[500px]:w-1" />
                 Bearer Of Curse
               </div>
             </div>
             <div className="cards w-full h-[31%] relative">
               <div className=" px-0.5 py-[0.150rem] absolute top-2 right-2 bg-blue-600 rounded-full  ">
-                <img src="/blob/mic on.svg" className="w-3 h-3 " />
+                <img src="/blob/mic on.svg" className="w-3 h-3 max-[500px]:h-1 max-[500px]:w-1" />
               </div>
-              <div className="flex items-center gap-1 text-xs absolute bottom-0 left-1 ">
+              <div className="flex items-center gap-1 text-xs max-[500px]:text-[0.2rem] absolute bottom-0 left-1 ">
                 {" "}
-                <img src="/blob/single person.svg" className="w-2 h-2" />
+                <img src="/blob/single person.svg" className="w-2 h-2 max-[500px]:h-1 max-[500px]:w-1" />
                 Ashen One
               </div>
             </div>
@@ -86,20 +86,20 @@ const VedioCallSection = () => {
 
           {/* bottom controls */}
           <div className="absolute bottom-3 w-full flex justify-center items-center gap-3">
-            <div className=" p-3 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
-              <img src="/blob/screen share.svg" className="w-6 h-6 " />
+            <div className=" p-3 max-[500px]:p-1 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
+              <img src="/blob/screen share.svg" className="w-6 h-6 max-[500px]:w-2 max-[500px]:h-2 " />
             </div>
-            <div className=" p-3 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
-              <img src="/blob/mic off.svg" className="w-6 h-6 " />
+            <div className=" p-3 max-[500px]:p-1 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
+              <img src="/blob/mic off.svg" className="w-6 h-6 max-[500px]:w-2 max-[500px]:h-2 " />
             </div>
-            <div className=" p-3 bg-red-500 rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
-              <img src="/blob/cross.svg" className="w-6 h-6 " />
+            <div className=" p-3 max-[500px]:p-1 bg-red-500 rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
+              <img src="/blob/cross.svg" className="w-6 h-6 max-[500px]:w-2 max-[500px]:h-2 " />
             </div>
-            <div className=" p-3 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
-              <img src="/blob/vedio off.svg" className="w-6 h-6 " />
+            <div className=" p-3 max-[500px]:p-1 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
+              <img src="/blob/vedio off.svg" className="w-6 h-6 max-[500px]:w-2 max-[500px]:h-2 " />
             </div>
-            <div className=" p-3 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
-              <img src="/blob/full screen.svg" className="w-6 h-6 " />
+            <div className=" p-3 max-[500px]:p-1 bg-[#68686a] rounded-full shadow-[0px_0px_20px_1px_#1e1e1e] ">
+              <img src="/blob/full screen.svg" className="w-6 h-6 max-[500px]:w-2 max-[500px]:h-2 " />
             </div>
           </div>
         </div>

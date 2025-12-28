@@ -14,7 +14,7 @@ const MetaBrainSection = () => {
 
   return (
     <>
-      <div className=" bg-[#f6f6f6] w-full h-full relative overflow-hidden">
+      <div className=" bg-[#f6f6f6] w-full h-full relative ">
         <div className="sidebar-lines w-1/2 absolute left-[-12%] top-0 ">
           <img
             src="/assest-huly/veritical blue lines.png"
@@ -53,7 +53,7 @@ const MetaBrainSection = () => {
                     <span className="text-white font-semibold">
                       Take notes.
                     </span>{" "}
-                    <br className="max-md:hidden"  />
+                    <br className="max-md:hidden" />
                     create documents to keep <br /> track of team resources
                   </div>
                 </div>
@@ -204,7 +204,8 @@ const MetaBrainSection = () => {
       </div>
 
       {/* second part */}
-      <h1 className="text-[5rem] max-lg:text-[4rem] font-bold tracking-[-0.20rem] leading-[1.1] text-neutral-950 relative pl-[22rem] max-lg:pl-[18rem]  inline-block mt-25 max-md:pl-3 max-md:text-[3rem]">
+
+      <h1 className="text-[5rem] max-lg:text-[4rem] font-bold tracking-[-0.20rem] leading-[1.1] text-neutral-950 relative pl-[20rem] max-lg:pl-[18rem]  inline-block mt-25 max-md:pl-3 max-md:text-[3rem]">
         Knowledge at <br />
         Your Fingertip
         <div className="profile flex flex-col items-center justify-center absolute bottom-0 max-md:bottom-[-12%] right-[-4.2%] max-md:right-[-13%] h-[8rem] z-50">
@@ -218,12 +219,11 @@ const MetaBrainSection = () => {
           <div className="dot w-2 h-2 bg-blue-600 rounded-full"></div>
         </div>
       </h1>
-      <div className="flex gap-10">
-        <div className="sticky rounded-[12px] top-[30%] z-50 ml-20 w-[340px] max-lg:w-[240px] h-[224px] max-lg:h-[180px] flex justify-center item-center shadow-[0px_0px_20px_5px_#00000061] mb-23 max-md:hidden ">
-          <img
-            src="/blob/team.png"
-            className="  scale-x-[1.19]  w-full h-full  "
-          />
+
+      <div className="flex gap-10 justify-center items-start">
+        {/* left side */}
+        <div className="rounded-[12px] sticky top-12 mb-24 transition-transform duration-300 ease-out  ml-20 w-[280px] max-lg:w-[240px] h-[240px] max-lg:h-[180px] flex justify-center item-center shadow-[0px_0px_20px_5px_#00000061] max-md:hidden ">
+          <img src="/blob/team.png" className="scale-x-[1.19] w-full h-full" />
           <div className="absolute bottom-0 left-0 p-4">
             <p className="text-sm text-neutral-900 mb-1 font-medium">
               Version History
@@ -233,7 +233,7 @@ const MetaBrainSection = () => {
             </p>
           </div>
           <motion.div
-            className="absolute top-[23%] left-[73%] h-8 w-[0.14rem] rounded-2xl bg-neutral-600"
+            className="absolute top-[23%] left-[73%] h-8 max-lg:h-6 w-[0.14rem] rounded-2xl bg-neutral-600"
             animate={{ opacity: [1, 0, 0, 0, 0, 1] }} // Instantly disappear, stay hidden, then reappear
             transition={{
               duration: 3, // Total cycle time (3 sec here)
@@ -244,13 +244,13 @@ const MetaBrainSection = () => {
           />
         </div>
         {/* second of the second part */}
-
+        {/* right side */}
         <div className="w-full max-md:px-3">
           <p className="text-[1.2rem] max-md:text-[1.1rem]  text-neutral-700">
             Huly offers a wide range of features to create and manage your
-            project <br  className="max-md:hidden"  />
+            project <br className="max-md:hidden" />
             documentation. Huly's suite of collaborative editing tools boosts
-            team <br className="max-md:hidden"   />
+            team <br className="max-md:hidden" />
             efficeincy
           </p>
           {/* buttons */}
@@ -297,8 +297,9 @@ const MetaBrainSection = () => {
               `}
             >
               Documents in Huly can be used for sharing reference materials
-              among <br className="max-[950px]:hidden" /> team  members,collaborating on plans and roadmaps ,storing
-              meeting notes <br className="max-[950px]:hidden" /> and assigning action Items.
+              among <br className="max-[950px]:hidden" /> team
+              members,collaborating on plans and roadmaps ,storing meeting notes{" "}
+              <br className="max-[950px]:hidden" /> and assigning action Items.
             </span>
           </p>
           <div className=" w-[72%] max-lg:w-[85%] max-md:w-full rounded-xl mt-10 mb-8">
@@ -310,13 +311,14 @@ const MetaBrainSection = () => {
           <p className="text-[1.2rem] max-md:text-[1.1rem]  text-[#323438] ">
             With <span className="text-neutral-400 line-through">live</span>{" "}
             real-time collaboration, remote teams are able to work together to{" "}
-            <br className="max-lg:hidden" /> bring a unified vision to life on the page. Tagging users,
-            linking to issues, <br className="max-lg:hidden"  /> and assigning action items are just a few
-            of the{" "}
+            <br className="max-lg:hidden" /> bring a unified vision to life on
+            the page. Tagging users, linking to issues,{" "}
+            <br className="max-lg:hidden" /> and assigning action items are just
+            a few of the{" "}
             <span className="text-neutral-400 line-through">
               Advanced solution
             </span>
-            <br className="max-md:hidden"  />
+            <br className="max-md:hidden" />
             <span className="text-[#f58562] relative mr-1">
               powerful feature
               <div className="profile flex flex-col items-center justify-center absolute bottom-[-60%] right-[-25%] h-[8rem] ">
@@ -340,9 +342,9 @@ const MetaBrainSection = () => {
           </div>
           <p className="text-[1.2rem]  max-md:text-[1.1rem]   text-[#1c1d20] ">
             Documents can be enhanced with rich text formatting, images,
-            attachments <br className="max-md:hidden"  />
+            attachments <br className="max-md:hidden" />
             and code blocks. Use documents to organize team plans, create
-            technical <br className="max-md:hidden"  />
+            technical <br className="max-md:hidden" />
             documentation and support your team's progress towards shared goals.
           </p>
           <div className="mt-2 flex items-center gap-1">
