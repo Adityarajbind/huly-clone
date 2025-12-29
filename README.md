@@ -3,7 +3,7 @@
 A responsive UI clone of the Huly.io website built using React , Tailwind CSS and framer, focusing on layout accuracy, modern animations, and clean component structure.
 
 ## Live Demo
-🔗 https://your-demo-link.vercel.app
+🔗 [https://your-demo-link.vercel.app](https://huly-clone-omega.vercel.app/)
 
 ## Screenshots
 ![Homepage](public/assest-huly/homepage.png)
