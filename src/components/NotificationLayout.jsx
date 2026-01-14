@@ -65,6 +65,7 @@ const NotificationLayout = ({ trigger }) => {
           muted
           loop
           playsInline
+          preload="metadata"
           className=" w-full h-full absolute  z-[-1] object-cover rounded-xl "
         >
           <source src="/waves.mp4" type="video/mp4" />
