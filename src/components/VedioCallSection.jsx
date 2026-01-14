@@ -11,6 +11,8 @@ const VedioCallSection = () => {
           muted
           loop
           playsInline
+        preload="metadata"
+
           className=" w-full h-full absolute top-0 max-sm:top-[-10%]  scale-[1.45] max-sm:right-[8%] max-sm:scale-[2] right-[5rem] "
         >
           <source src="/waves blue.mp4" type="video/mp4" />
@@ -33,6 +35,8 @@ const VedioCallSection = () => {
           muted
           loop
           playsInline
+        preload="metadata"
+
           className="w-full h-full scale-[1.01] rounded-xl"
         >
           <source src="/meeting.mp4" type="video/mp4" />

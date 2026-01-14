@@ -64,6 +64,7 @@ const App = () => {
             autoPlay
             muted
             loop
+          preload="metadata"
             playsInline
             className="absolute top-0 xl:left-[30px] lg:left-[-6%] left-[40px] w-full h-full object-cover scale-x-[1.25] scale-y-[1.3] max-[768px]:scale-x-[1.3] max-sm:scale-[2.2] max-sm:object-contain max-sm:left-10 max-sm:shadow-2xl "
           >
