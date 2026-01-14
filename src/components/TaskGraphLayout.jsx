@@ -41,7 +41,7 @@ export default function MeetingComponent() {
     // start cooldown timer
     cooldownRef.current = setTimeout(() => {
       setCooldown(false);
-    }, 3000); // 2 sec cooldown
+    }, 2000); // 2 sec cooldown
   };
 
   return (
