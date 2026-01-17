@@ -13,7 +13,7 @@ const GithubSection = () => {
           and GitHub Projects.
         </p>
       </div>
-      <div className="w-full aspect-video overflow-hidden relative bg-[#111111]  max-md:scale-[1.3] -z-0 max-md:mt-4">
+      <div className="w-full aspect-video overflow-hidden relative bg-[#111111]   -z-0 max-md:mt-4">
         <video
           autoPlay
           muted
